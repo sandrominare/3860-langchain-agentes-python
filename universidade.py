@@ -10,7 +10,7 @@ import pandas as pd
 
 
 def busca_dados_da_universidade(universidade: str):
-    dados = pd.read_csv("documentos/universidades.csv")
+    dados = pd.read_csv("/documentos/universidades.csv")
     dados["NOME_FACULDADE"] = dados["NOME_FACULDADE"].str.lower()
     dados_com_essa_universidade = dados[dados["NOME_FACULDADE"] == universidade]
     if dados_com_essa_universidade.empty:
@@ -19,11 +19,11 @@ def busca_dados_da_universidade(universidade: str):
 
 
 def busca_dados_das_universidades():
-    dados = pd.read_csv("documentos/universidades.csv")
+    dados = pd.read_csv("./3860-langchain-agentes-python/documentos/universidades.csv")
     return dados.to_dict()
 
 
-class ExtratorDeUniversidade(BaseModel):
+class ExtratorDeUniversidade(44):
     universidade:str = Field("O nome da universidade em minúsculo.")
 
 
