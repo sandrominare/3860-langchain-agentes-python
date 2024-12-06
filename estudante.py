@@ -10,7 +10,7 @@ import pandas as pd
 
 
 def busca_dados_de_estudante(estudante):
-    dados = pd.read_csv("documentos/estudantes.csv")
+    dados = pd.read_csv("3860-langchain-agentes-python\documentos\estudantes.csv")    
     dados_com_esse_estudante = dados[dados["USUARIO"] == estudante]
     if dados_com_esse_estudante.empty:
         return {}
